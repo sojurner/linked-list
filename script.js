@@ -24,8 +24,6 @@ function bookmarkCreator() {
   bookmarkList.prepend(newBookmark);
   document.querySelector('form').reset();
 };
-
-
 //Events
 //---------
 //PHASE 1 

@@ -7,7 +7,6 @@ body {
 
 .left-section {
   background-color: #455A62;
-  flex-direction: column;
   float: left;
   height: 100vw;
   overflow: auto;
@@ -16,24 +15,20 @@ body {
 }
 
 header {
+  display: inline-block;
   color: #FFFFFF;
   margin: 3vw 0 1.3vw 0;
-  text-align: center;
 }
 
-.Title {
-  display: inline-block;
+.title {
   font-size: 100px;
   font-weight: 800;
-  margin: 8vw 0 0 0;
+  margin: 8rem 0 0 0;
 }
 
 .linked-list-logo {
-  display: inline-block;
   width: 8.5rem;
 }
-
-/*add padding bot on website title*/
 
 .title-url-input {
   font-size: 3.0rem;
@@ -46,10 +41,9 @@ input::placeholder {
   color: #B4B4B4;
   font-size: 40px;
   font-weight: 300;
-  letter-spacing: 0.15vw;
+  letter-spacing: 0.15rem;
   padding: 0 0 0 10px;
 }
-
 
 .enter-button {
   color: #FFFFFF;
@@ -57,8 +51,8 @@ input::placeholder {
   border: none;
   font-size: 1.5rem;
   font-weight: 700;
-  margin: 1.4vw 0;
-  padding: 1.2vw 0;
+  margin: 1.4rem 0;
+  padding: 1.2rem 0;
   width: 645px;
 }
 
@@ -106,6 +100,16 @@ input::placeholder {
   -webkit-animation: mymove 1s ease-in, fadein .5s ease-in alternate; 
   animation: mymove 1s ease-in, fadein .5s ease-in alternate;
 }
+
+@keyframes mymove {
+    0%   {left: 500px;}
+    100% {left: 10px;}
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
 /*.all-cards {
   color: #455A64;
   border: 1.5px solid #607D8B;
@@ -151,7 +155,7 @@ button.delete {
 /*Media Queries*/
 @media screen and (max-width: 1400px) {
   
-  .Title {
+  .title {
     font-size: 6.5vw;
   }
   
@@ -175,6 +179,7 @@ button.delete {
 }
 
 @media screen and (max-width: 960px) {
+  
   .left-section,
   .bookmark-content-list {
     flex-direction: column;
@@ -199,7 +204,7 @@ button.delete {
     margin: 2.5vw 0;
   }
 
-  .Title {
+  .title {
     font-size: 55px;
     margin: 0;
   }
@@ -212,18 +217,18 @@ button.delete {
     text-align: center;
     width: 5rem;
   }
-  
+
   .enter-button {
     margin: 1.5vw 0 1.5vw 0;
     padding: 0.7rem 0;
   }
 
-  .Title {
+  .title {
     font-size: 10vw;
   }
 }
 @media screen and (max-width: 480px) {
-  .Title {
+  .title {
     margin:0 0 1rem 0;
   }
   .title-url-input {
@@ -237,7 +242,6 @@ button.delete {
 
 
 @media screen and (max-width: 480px) {
-  
   .linked-list-logo {
     text-align: center;
     width: 15vw;
