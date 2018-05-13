@@ -9,8 +9,8 @@ body {
   background-color: #455A62;
   flex-direction: column;
   float: left;
-  height: 983px;
-  overflow: hidden;
+  height: 100vh;
+  overflow: auto;
   text-align: center;
   width: 50%;
 }
@@ -58,7 +58,7 @@ input::placeholder {
   font-size: 1.5rem;
   font-weight: 700;
   margin: 1.4vw 0;
-  padding: .8vw 0;
+  padding: 1.2vw 0;
   width: 645px;
 }
 
@@ -71,17 +71,16 @@ input::placeholder {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 983px;
+  height: 100vh;
   overflow: auto;
   width: 50%;
   padding: 0;
-  margin: 1vw 2vw;
 }
 
 .all-cards {
   color: #455A64;
   border: 1.5px solid #607D8B;
-  margin: 0
+  margin: 2em 0 0 0;
   padding: 0;
   background-color: #F2F4F4;
 }
@@ -178,8 +177,7 @@ button.delete {
   }
 
   .title-url-input {
-    padding: 0.6rem 0 0.6rem 0;
-    margin: 2vw 0 1vw 0;
+    margin: 1.5vw 0 0.5vw 0;
   }
 
   .linked-list-logo {
@@ -188,14 +186,27 @@ button.delete {
   }
 
   .enter-button {
-    margin: 2vw 0 2vw 0;
-    padding: 1.3rem 0;
+    margin: 1.5vw 0 1.5vw 0;
+    padding: 0.7rem 0;
   }
 
   .Title {
     font-size: 10vw;
   }
 }
+@media screen and (max-width: 480px) {
+  .Title {
+    margin:0 0 1rem 0;
+  }
+  .title-url-input {
+    margin: 0 0 1rem 0;
+    padding: 0.6vw 0;
+  }
+  .enter-button {
+    padding: 1.3rem 0;
+    margin: 1.0vw 0 0 0;
+  }
+
 
 @media screen and (max-width: 480px) {
   
