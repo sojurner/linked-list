@@ -1,89 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title>Linked List</title>
-<link rel="stylesheet" type="text/css" href="style.css">
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
 </head>
 <body>
-<main id="master-main">
-  <section id="left-sect">
+  <section class="left-section">
     <header>
-      <h1 id="linked">Linked</h1>
-      <img id="linked-list-logo" src="file:///Users/pkim/Downloads/linked-list-logo.svg">
-      <h1 id="list">List</h1>
+      <h1 class="Title">Linked <img class="linked-list-logo" src="file:///Users/pkim/Downloads/linked-list-logo.svg"> List</h1>
     </header>
     <form>
-      <input class="web-title-url" type="" placeholder="Website Title">
-      <br>
-      <br>
-      <br>
-      <input class="web-title-url" type="" placeholder="Website URL" >
-      <br>
-      <br>
-      <br>
-      <button id="enter">Enter</button> 
+      <label for="website-title"></label>
+      <input id="website-title" class="title-url-input" type="text" placeholder="Website Title">
+      <label for="website-url"></label>
+      <input id="website-url" class="title-url-input" type="text" placeholder="Website URL">
+      <button class="enter-button">Enter Title and URL</button> 
     </form>
   </section>
-  <section id="right-sect">
-    <section id="top-up">
+  <main role="main" class="main-content">
+    <section class="all-cards card-1">
       <h2 class="web-title">The Website Title</h2>
-      <br>
-      <br>
-      <br>
       <h3 class="web-url">www.thewebsiteurl.com</h3>
-      <br>
-      <br>
-      <h4 class="read">Read</h4>
-      <h4 class="delete">Delete</h4>
+      <button class="read">Read</button>
+      <button class="delete">Delete</button>
     </section>
-      <br>
-      <br>
-      <br>
-      <br>
-    <section id="top-middle">
+    <section class="all-cards card-2-3">
       <h2 class="web-title">The Website Title</h2>
-      <br>
-      <br>
-      <br>
       <h3 class="web-url">www.thewebsiteurl.com</h3>
-      <br>
-      <br>
-      <h4 class="read">Read</h4>
-      <h4 class="delete">Delete</h4>
-    </section>
-      <br>
-      <br>
-      <br>
-      <br>
-    <section id="bottom-middle">
+      <button class="read">Read</button>
+      <button class="delete">Delete</button>
+      </section>
+    <section class="all-cards card-2-3">
       <h2 class="web-title">The Website Title</h2>
-      <br>
-      <br>
-      <br>
       <h3 class="web-url">www.thewebsiteurl.com</h3>
-      <br>
-      <br>
-      <h4 class="read">Read</h4>
-      <h4 class="delete">Delete</h4>
+      <button class="read">Read</h4>
+      <button class="delete">Delete</button>
     </section>
-      <br>
-      <br>
-      <br>
-      <br>
-    <section id="bottom-down">
+    <section class="all-cards card-4">
       <h2 class="web-title">The Website Title</h2>
-      <br>
-      <br>
-      <br>
       <h3 class="web-url">www.thewebsiteurl.com</h3>
-      <br>
-      <br>
-      <h4 class="read">Read</h4>
-      <h4 class="delete">Delete</h4>
+      <button class="read">Read</button>
+      <button class="delete">Delete</button>
     </section>
-  </section>
-<script type="text/javascript" src="script.js"></script>
-</main>
-
+  </main>
+  <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
