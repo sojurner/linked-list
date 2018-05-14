@@ -7,6 +7,7 @@ var displayNotReadCounter = document.querySelector('.not-read-counter');
 var displayTotalCounter = document.querySelector('.total-counter');
 var notReadCounter = document.querySelector('.not-read-counter');
 var titleUrlForm = document.querySelector('.title-url-form');
+var bookmarkList = document.querySelector('.bookmark-content-list');
 
 //Functions
 
@@ -19,13 +20,12 @@ function enableEnterButton() {
 };
 
 function bookmarkCreator() {
-  var bookmarkList = document.querySelector('#bookmark-content-list');
   var newBookmark = document.createElement('article');
   newBookmark.classList.add('bookmark');  
   newBookmark.innerHTML =
    `<h2>${websiteTitle.value}</h2>
     <a target='_blank' href="${websiteUrl.value}">${websiteUrl.value}</a>
-    <button title = "Read Button" class = "read-button">Read</button>
+    <button title = "Read Button" class = "read-button">Mark As Read</button>
     <button title = "Delete Button" class = "delete-button">Delete</button>`
   bookmarkList.prepend(newBookmark);
   document.querySelector('form').reset();

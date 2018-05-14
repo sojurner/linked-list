@@ -68,7 +68,7 @@ input::placeholder {
   text-decoration: underline;
 }
 
-.card-counter ul li {
+.card-counter li {
   color: #ffffff;
   display: inline-block;
   font-weight: 400;
@@ -80,7 +80,7 @@ input::placeholder {
 }
 
 /*Right section*/
-#bookmark-content-list {
+.bookmark-content-list {
   background-color: #CFD8DC;
   display: flex;
   flex-direction: column;
@@ -96,9 +96,8 @@ input::placeholder {
   background-color: white;
   border: 2px solid #607D8B;
   display: block;
-  margin: 0px;
+  margin: 0;
   padding: 0;
-  position: relative;
 }
 
 @keyframes shazam {
@@ -111,28 +110,28 @@ input::placeholder {
     to { opacity: 1; }
 }
 
+.bookmark h2 {
+  color: #455A64;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0;
+  padding: 0 0 2rem 1rem;
+}
+
+.bookmark a {
+  float: left;
+  color: #607D8B;
+  padding: 1.5rem 0 1.5rem 1rem;
+  font-size: 1.5rem;
+}
+
 .read-button {
   float: left;
   font-size: 1.3rem;
 
 }
 
-.bookmark h2 {
-  color: #455A64;
-  font-size: 2.5rem;
-  font-weight: 800;
-  margin: 0;
-  padding: 0 0 1.5rem 1rem;
-}
-
-.bookmark a {
-  color: #607D8B;
-  padding: 1.5rem 0 1.5rem 1rem;
-  font-size: 1.5rem;
-}
-
 .delete-button {
-  display: inline-block;
   float: right;
   font-size: 1.3rem;
 }
@@ -166,7 +165,7 @@ input::placeholder {
 @media screen and (max-width: 960px) {
   
   .left-section,
-  #bookmark-content-list {
+  .bookmark-content-list {
     flex-direction: column;
     float: none; 
     height: 50%;   
@@ -180,7 +179,7 @@ input::placeholder {
     top: 0;
   }
 
-  #bookmark-content-list {
+  .bookmark-content-list {
     display: block;
     bottom: 0;
   }
