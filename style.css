@@ -79,7 +79,7 @@ input::placeholder {
 }
 
 /*Right section*/
-#bookmark-content-list {
+.bookmark-content-list {
   background-color: #CFD8DC;
   display: flex;
   flex-direction: column;
@@ -165,7 +165,7 @@ input::placeholder {
 @media screen and (max-width: 960px) {
   
   .left-section,
-  #bookmark-content-list {
+  .bookmark-content-list {
     flex-direction: column;
     float: none; 
     height: 50%;   
@@ -179,7 +179,7 @@ input::placeholder {
     top: 0;
   }
 
-  #bookmark-content-list {
+  .bookmark-content-list {
     display: block;
     bottom: 0;
   }

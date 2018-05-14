@@ -19,59 +19,28 @@ var disableEnterButton = function() {
   }
 };
 
+websiteTitle.addEventListener('keyup', disableEnterButton);
+
+websiteUrl.addEventListener('keyup', disableEnterButton);
+
+titleUrlForm.addEventListener('submit', bookmarkCreator); 
+
 function bookmarkCreator() {
+  event.preventDefault();
   var newBookmark = document.createElement('article');
   newBookmark.classList.add('bookmark');  
   newBookmark.innerHTML = 
   `<h2>${websiteTitle.value}</h2>
-   <hr>
-   <a target='_blank' href="${websiteUrl.value}">${websiteUrl.value}</a>
-   <hr>
-   <button title = "Read Button" class = "read-button">Read</button>
-   <button title = "Delete Button" class = "delete-button">Delete</button>`;
+  <hr>
+  <a target='_blank' href="${websiteUrl.value}">${websiteUrl.value}</a>
+  <hr>
+  <button title ="Read Button" class   ="read-button">Read</button>
+  <button title ="Delete Button" class ="delete-button">Delete</button>`;
   bookmarkList.prepend(newBookmark);
-  document.querySelector('form').reset();
+  titleUrlForm.reset();
 };
 
-
-//Events
-//---------
-//PHASE 1 
-//---------
-//clicking "enter" button to create bookmark
-titleUrlForm.addEventListener('submit', function(e) {
-  e.preventDefault();
-});
-
-enterButton.addEventListener('click', function() {
-  bookmarkCreator();
-});
-//clicking "delete" to remove bookmark
-
-//---------
-//PHASE 2 
-//---------
-//valid url creates bookmark
-
-//invalid url returns error 
-
-//---------
-//PHASE 3 
-//---------
-//disable/enable 
-
-//card count reflects read/unread/total 
-
-//clicking "read" button to increment 'read' counter
-//unclicked "read" button adds to 'unread' counter
-//'read' + 'unread'  = total counter 
 function bookmarkCounter() {
   cardCount = document.queryselector('.bookmark').length;
   readCount = readBookmarks
 }
-
-//--------
-//PHASE 4 
-//--------
-//clicking "clear" button to remove bookmarks clicked as "read"
-
