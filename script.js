@@ -1,39 +1,49 @@
 //Variables
-var websiteTitle = document.querySelector('.input-website-title');
-var websiteUrl = document.querySelector('.website-url');
+var websiteTitle = document.querySelector('#website-title');
+var websiteUrl = document.querySelector('#website-url');
 var enterButton = document.querySelector('.enter-button');
 var displayReadCounter = document.querySelector('.read-counter');
-var dispalyNotReadCounter = document.querySelector('.not-read-counter');
+var displayNotReadCounter = document.querySelector('.not-read-counter');
 var displayTotalCounter = document.querySelector('.total-counter');
-var notreadCounter = document.querySelector('.not-read-counter');
-var bookmarkList = document.querySelector('.bookmark-content-list');
+var notReadCounter = document.querySelector('.not-read-counter');
+var titleUrlForm = document.querySelector('.title-url-form');
+
 //Functions
 
+function disableEnterButton() {
+  enterbutton.setAttribute('disabled', true);
+};
+
+function enableEnterButton() {
+  enterbutton.removeAttribute('disabled');
+};
 
 function bookmarkCreator() {
-  var bookmarkList = document.querySelector('.bookmark-content-list');
+  var bookmarkList = document.querySelector('#bookmark-content-list');
   var newBookmark = document.createElement('article');
-  newBookmark.classList.add('bookmarks');  
-  newBookmark.innerHTMl =
+  newBookmark.classList.add('bookmark');  
+  newBookmark.innerHTML =
    `<h2>${websiteTitle.value}</h2>
-    <hr>
     <a target='_blank' href="${websiteUrl.value}">${websiteUrl.value}</a>
-    <hr>
-      <button title = "Read Button" class = "read-button">Read</button>
-      <button title = "Delete Button" class = "delete-button">Delete</button>`
+    <button title = "Read Button" class = "read-button">Read</button>
+    <button title = "Delete Button" class = "delete-button">Delete</button>`
   bookmarkList.prepend(newBookmark);
   document.querySelector('form').reset();
 };
+
+
 //Events
 //---------
 //PHASE 1 
-enterButton.addEventListener('click', function() {
-  bookmarkCreator();
-  console.log(testing);
-});
 //---------
 //clicking "enter" button to create bookmark
+titleUrlForm.addEventListener('submit', function(e) {
+  e.preventDefault();
+});
 
+enterButton.addEventListener('click', function() {
+  bookmarkCreator();
+});
 //clicking "delete" to remove bookmark
 
 //---------
@@ -49,9 +59,14 @@ enterButton.addEventListener('click', function() {
 //disable/enable 
 
 //card count reflects read/unread/total 
+
 //clicking "read" button to increment 'read' counter
 //unclicked "read" button adds to 'unread' counter
 //'read' + 'unread'  = total counter 
+function bookmarkCounter() {
+  cardCount = document.queryselector('.bookmark').length;
+  readCount = readBookmarks
+}
 
 //--------
 //PHASE 4 

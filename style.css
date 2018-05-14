@@ -7,6 +7,7 @@ body {
 
 .left-section {
   background-color: #455A62;
+  
   float: left;
   height: 100vw;
   overflow: auto;
@@ -17,7 +18,7 @@ body {
 header {
   display: inline-block;
   color: #FFFFFF;
-  margin: 3vw 0 1.3vw 0;
+  margin: 0 0 10px 0;
 }
 
 .title {
@@ -52,7 +53,7 @@ input::placeholder {
   font-size: 1.5rem;
   font-weight: 700;
   margin: 1.4rem 0;
-  padding: 1.2rem 0;
+  padding: 1.0rem 0;
   width: 645px;
 }
 
@@ -79,84 +80,68 @@ input::placeholder {
 }
 
 /*Right section*/
-.bookmark-content-list {
+#bookmark-content-list {
   background-color: #CFD8DC;
   display: flex;
-  justify-content: center;
   flex-direction: column;
   height: 100vh;
+  justify-content: center;
   overflow: auto;
-  width: 50%;
   padding: 0;
+  width: 50%;
 }
 
 .bookmark {
-  position: relative;
+  animation: shazam 1s ease-in, bazinga 1s ease-in alternate;
+  background-color: white;
   border: 2px solid #607D8B;
   display: block;
-  margin: 10px;
-  padding: 10px 10px 3px;
-  background-color: white;
-  -webkit-animation: mymove 1s ease-in, fadein .5s ease-in alternate; 
-  animation: mymove 1s ease-in, fadein .5s ease-in alternate;
+  margin: 0px;
+  padding: 0;
+  position: relative;
 }
 
-@keyframes mymove {
-    0%   {left: 500px;}
-    100% {left: 10px;}
+@keyframes shazam {
+    0%   {right: 500px;}
+    100% {right: 10px;}
 }
 
-@keyframes fadein {
+@keyframes bazinga {
     from { opacity: 0; }
     to { opacity: 1; }
 }
-/*.all-cards {
-  color: #455A64;
-  border: 1.5px solid #607D8B;
-  margin: 2em 0 0 0;
-  padding: 0;
-  background-color: #F2F4F4;
-}
-.card-1 {
-  align-items: flex-start;
-}
 
-.card-2-3 {
-  align-items: flex-center;
-}
-
-.card-4 {
-  align-items: flex-end;
-}
-
-.read {
-  display: inline-block;
+.read-button {
   float: left;
   font-size: 1.3rem;
+
 }
 
-h2.web-title {
-  font-weight: 300;
-  align-items: flex-start;
+.bookmark h2 {
+  color: #455A64;
+  font-size: 2.5rem;
+  font-weight: 800;
   margin: 0;
+  padding: 0 0 1.5rem 1rem;
 }
 
-h3.web-url {
+.bookmark a {
+  color: #607D8B;
+  padding: 1.5rem 0 1.5rem 1rem;
+  font-size: 1.5rem;
 }
 
-button.read {
-}
-button.delete {
+.delete-button {
   display: inline-block;
   float: right;
   font-size: 1.3rem;
-}*/
+}
 
 /*Media Queries*/
 @media screen and (max-width: 1400px) {
   
   .title {
-    font-size: 6.5vw;
+    font-size: 5.0vw;
   }
   
   .linked-list-logo {
@@ -181,7 +166,7 @@ button.delete {
 @media screen and (max-width: 960px) {
   
   .left-section,
-  .bookmark-content-list {
+  #bookmark-content-list {
     flex-direction: column;
     float: none; 
     height: 50%;   
@@ -195,7 +180,8 @@ button.delete {
     top: 0;
   }
 
-  .bookmark-content-list {
+  #bookmark-content-list {
+    display: block;
     bottom: 0;
   }
 
@@ -205,39 +191,37 @@ button.delete {
   }
 
   .title {
-    font-size: 55px;
+    font-size: 45px;
     margin: 0;
   }
 
   .title-url-input {
     margin: 1.5vw 0 0.5vw 0;
+    padding: .1rem ;
   }
 
   .linked-list-logo {
     text-align: center;
-    width: 5rem;
+    width: 4rem;
   }
 
   .enter-button {
     margin: 1.5vw 0 1.5vw 0;
-    padding: 0.7rem 0;
-  }
-
-  .title {
-    font-size: 10vw;
+    padding: 0.4rem 0;
   }
 }
+
 @media screen and (max-width: 480px) {
   .title {
-    margin:0 0 1rem 0;
+    margin:0 0 0.2rem 0;
   }
   .title-url-input {
     margin: 0 0 1rem 0;
     padding: 0.6vw 0;
   }
   .enter-button {
-    padding: 1.3rem 0;
     margin: 1.0vw 0 0 0;
+    padding: 1.3rem 0;
   }
 
 
