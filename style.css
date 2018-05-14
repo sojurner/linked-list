@@ -7,7 +7,6 @@ body {
 
 .left-section {
   background-color: #455A62;
-  
   float: left;
   height: 100vw;
   overflow: auto;
@@ -121,6 +120,7 @@ input::placeholder {
 .bookmark a {
   float: left;
   color: #607D8B;
+  display: block;
   padding: 1.5rem 0 1.5rem 1rem;
   font-size: 1.5rem;
 }
@@ -128,7 +128,6 @@ input::placeholder {
 .read-button {
   float: left;
   font-size: 1.3rem;
-
 }
 
 .delete-button {
