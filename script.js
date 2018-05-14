@@ -7,26 +7,28 @@ var displayNotReadCounter = document.querySelector('.not-read-counter');
 var displayTotalCounter = document.querySelector('.total-counter');
 var notReadCounter = document.querySelector('.not-read-counter');
 var titleUrlForm = document.querySelector('.title-url-form');
+var bookmarkList = document.querySelector('.bookmark-content-list');
 
 //Functions
 
-function disableEnterButton() {
-  enterbutton.setAttribute('disabled', true);
-};
-
-function enableEnterButton() {
-  enterbutton.removeAttribute('disabled');
+var disableEnterButton = function() {
+  if (websiteTitle === '' || websiteUrl === '') {
+    enterButton.disabled = true;
+  } else {
+    enterButton.disabled = false;
+  }
 };
 
 function bookmarkCreator() {
-  var bookmarkList = document.querySelector('#bookmark-content-list');
   var newBookmark = document.createElement('article');
   newBookmark.classList.add('bookmark');  
-  newBookmark.innerHTML =
-   `<h2>${websiteTitle.value}</h2>
-    <a target='_blank' href="${websiteUrl.value}">${websiteUrl.value}</a>
-    <button title = "Read Button" class = "read-button">Read</button>
-    <button title = "Delete Button" class = "delete-button">Delete</button>`
+  newBookmark.innerHTML = 
+  `<h2>${websiteTitle.value}</h2>
+   <hr>
+   <a target='_blank' href="${websiteUrl.value}">${websiteUrl.value}</a>
+   <hr>
+   <button title = "Read Button" class = "read-button">Read</button>
+   <button title = "Delete Button" class = "delete-button">Delete</button>`;
   bookmarkList.prepend(newBookmark);
   document.querySelector('form').reset();
 };
