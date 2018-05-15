@@ -1,4 +1,3 @@
-//Variables
 var websiteTitle = document.querySelector('#website-title');
 var websiteUrl = document.querySelector('#website-url');
 var enterButton = document.querySelector('.enter-button');
@@ -9,19 +8,13 @@ var notReadCounter = document.querySelector('.not-read-counter');
 var titleUrlForm = document.querySelector('.title-url-form');
 var bookmarkList = document.querySelector('.bookmark-content-list');
 
-//Functions
-
-var disableEnterButton = function() {
-  if (websiteTitle === '' || websiteUrl === '') {
-    enterButton.disabled = true;
-  } else {
+var enableEnterButton = function() {
+  if (websiteTitle !== '' && websiteUrl !== '') {
     enterButton.disabled = false;
   }
 };
 
-websiteTitle.addEventListener('keyup', disableEnterButton);
-
-websiteUrl.addEventListener('keyup', disableEnterButton);
+websiteUrl.addEventListener('keyup', enableEnterButton);
 
 titleUrlForm.addEventListener('submit', bookmarkCreator); 
 
@@ -34,13 +27,13 @@ function bookmarkCreator() {
   <hr>
   <a target='_blank' href="${websiteUrl.value}">${websiteUrl.value}</a>
   <hr>
-  <button title ="Read Button" class   ="read-button">Read</button>
+  <button title="Read Button" class   ="read-button">Read</button>
   <button title ="Delete Button" class ="delete-button">Delete</button>`;
   bookmarkList.prepend(newBookmark);
   titleUrlForm.reset();
 };
 
 function bookmarkCounter() {
-  cardCount = document.queryselector('.bookmark').length;
+  cardCount = document.querySelector('.bookmark').length;
   readCount = readBookmarks
 }
