@@ -8,7 +8,7 @@ body {
 .left-section {
   background-color: #455A62;
   float: left;
-  height: 100vw;
+  height: 100vh;
   overflow: auto;
   text-align: center;
   width: 50%;
@@ -60,6 +60,10 @@ input::placeholder {
   background-color: #FFD773
 }
 
+.enter-button:disabled{
+  background-color: #8A6464;
+}
+
 .card-counter h2 {
   color: #ffc107;
   font-size: 1.063em;
@@ -67,7 +71,7 @@ input::placeholder {
   text-decoration: underline;
 }
 
-.card-counter li {
+.card-counter ul li {
   color: #ffffff;
   display: inline-block;
   font-weight: 400;
@@ -84,7 +88,6 @@ input::placeholder {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  justify-content: center;
   overflow: auto;
   padding: 0;
   width: 50%;
@@ -95,8 +98,9 @@ input::placeholder {
   background-color: white;
   border: 2px solid #607D8B;
   display: block;
-  margin: 0;
+  margin: 15px 20px;
   padding: 0;
+  position: relative;
 }
 
 @keyframes shazam {
@@ -111,28 +115,48 @@ input::placeholder {
 
 .bookmark h2 {
   color: #455A64;
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   font-weight: 800;
   margin: 0;
-  padding: 0 0 2rem 1rem;
+  padding: 0 0 0rem 1rem;
 }
 
 .bookmark a {
-  float: left;
   color: #607D8B;
   display: block;
-  padding: 1.5rem 0 1.5rem 1rem;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
+  padding: .2rem 0 .2rem 1rem;
+  text-decoration: underline;
+  text-decoration-color: #f2f4f4;
 }
 
+button {
+  background: none;
+  border: none;
+  padding: 0;
+}
 .read-button {
   float: left;
   font-size: 1.3rem;
+  margin: .1rem 0 .5rem 1rem;
+  text-decoration: underline;
+  text-decoration-color: #f2f4f4;
 }
 
 .delete-button {
+  display: inline-block;
   float: right;
   font-size: 1.3rem;
+  margin: .1rem 1rem .5rem 0rem;
+  text-decoration: underline;
+  text-decoration-color: #f2f4f4;
+}
+
+.bookmark a:hover,
+.bookmark button:hover {
+  color: #455A64;
+  font-weight: 800;
+  text-decoration-color: #FFC107;
 }
 
 /*Media Queries*/
