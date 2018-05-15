@@ -1,23 +1,25 @@
-//Variables
 var websiteTitle = document.querySelector('#website-title');
 var websiteUrl = document.querySelector('#website-url');
 var enterButton = document.querySelector('.enter-button');
 var notReadCounter = document.querySelector('.not-read-counter');
 var titleUrlForm = document.querySelector('.title-url-form');
 var bookmarkList = document.querySelector('.bookmark-content-list');
+
 var displayReadCounter = document.querySelector('.read-counter');
 var displayNotReadCounter = document.querySelector('.not-read-counter');
 var displayTotalCounter = document.querySelector('.total-counter');
 var totalCounter = 0, readCounter = 0, notReadCounter = 0
-//Functions
+
+var enableEnterButton = function() {
+  if (websiteTitle !== '' && websiteUrl !== '') {
+    enterButton.disabled = false;
+  }
+};
 
 
-websiteTitle.addEventListener('input', disableEnterButton);
-
-websiteUrl.addEventListener('input', disableEnterButton);
+websiteUrl.addEventListener('keyup', enableEnterButton);
 
 titleUrlForm.addEventListener('submit', bookmarkCreator); 
-
 
 function bookmarkCreator() {
   event.preventDefault();
@@ -44,3 +46,5 @@ function bookmarkCounter() {
   displayTotalCounter.innerText = totalCounter;
   displayNotReadCounter.innerText = notReadCounter;
 };
+ 
+
