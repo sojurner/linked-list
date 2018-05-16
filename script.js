@@ -19,7 +19,7 @@ function enableEnterButton() {
 
 function handleBookmarkClick(event) {
   if (event.target.className === 'read-button') {
-    newBookmark.classList.add('read');
+    event.target.parentNode.classList.toggle('read');
   }
   if (event.target.className === 'delete-button') {
     newBookmark.remove();
@@ -47,7 +47,7 @@ function bookmarkCounter() {
   var readCounter = document.querySelector('.read-counter');
   var totalCounter = document.querySelector('.total-counter');
   var notReadCounter = document.querySelector('.not-read-counter');
-  readCount = document.querySelectorAll('.read').length
+  readCount = document.querySelectorAll('.read').length;
   totalCount = document.querySelectorAll('.bookmark').length;
   notReadCount = (totalCount - readCount);
   readCounter.innerText = readCount;
