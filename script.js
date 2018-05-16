@@ -18,7 +18,6 @@ function enableEnterButton() {
 };
 
 function handleBookmarkClick(event) {
-  console.log(event.target);
   if (event.target.className === 'read-button') {
     event.target.parentNode.classList.toggle('read');
   }
