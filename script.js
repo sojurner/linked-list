@@ -18,11 +18,12 @@ function enableEnterButton() {
 };
 
 function handleBookmarkClick(event) {
+  console.log(event.target);
   if (event.target.className === 'read-button') {
-    newBookmark.classList.add('read');
+    event.target.parentNode.classList.toggle('read');
   }
   if (event.target.className === 'delete-button') {
-    newBookmark.remove();
+    event.target.parentNode.remove();
   }  
   bookmarkCounter();
 };
