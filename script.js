@@ -16,6 +16,16 @@ function enableEnterButton() {
   }
 };
 
+function handleBookmarkClick(event) {
+  if (event.target.className === 'read-button') {
+    newBookmark.classList.toggle('read');
+    readCounter ++;
+  }
+  if (event.target.className === 'delete-button') {
+    newBookmark.remove();
+  }  
+};
+
 function bookmarkCreator() {
   event.preventDefault();
   newBookmark = document.createElement('article');
@@ -43,12 +53,3 @@ function bookmarkCounter() {
   totalCounter.innerText = totalCount;
   notReadCounter.innerText = notReadCount;
 };
- 
-function deleteBookmark() {
-  if (event.target && event.target.matches('.delete-button')) {
-    var card = event.target.closest('.bookmark');
-    bookmark.remove();
-  }
-  bookmarkCounter();
-};
-
