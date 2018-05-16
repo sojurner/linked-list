@@ -240,6 +240,9 @@ button {
     margin: .5rem 0 0 0;
     padding: 0.6rem 0;
   }
+
+  .read-button {
+    float: none;
 }
 
 @media screen and (max-width: 480px) {
