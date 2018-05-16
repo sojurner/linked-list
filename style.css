@@ -33,13 +33,13 @@ header {
 .title-url-input {
   font-size: 2.0rem;
   margin: 1.4vw 0 1.8vw 0;
-  padding: 10px 7px;
+  padding: 10px 0px;
   width: 640px;
 }
 
 input::placeholder {
   color: #B4B4B4;
-  font-size: 40px;
+  font-size: 85%;
   font-weight: 300;
   letter-spacing: 0.15rem;
   padding: 0 0 0 10px;
@@ -53,7 +53,7 @@ input::placeholder {
   font-weight: 700;
   margin: 1.4rem 0;
   padding: 1.0rem 0;
-  width: 660px;
+  width: 647px;
 }
 
 .enter-button:hover { 
@@ -172,7 +172,7 @@ button {
 @media screen and (max-width: 1400px) {
   
   .title {
-    font-size: 5.0vw;
+    font-size: 6.0vw;
   }
   
   .linked-list-logo {
@@ -181,7 +181,7 @@ button {
   }
 
   .enter-button {
-    width: 93%;
+    width: 91%;
   }
 
   .title-url-input {
@@ -223,7 +223,7 @@ button {
 
   .title {
     font-size: 55px;
-    margin: 0;
+    margin: 2rem 0 0 0;
   }
 
   .title-url-input {
@@ -237,30 +237,66 @@ button {
   }
 
   .enter-button {
-    margin: .5rem 0 0 0;
-    padding: 0.6rem 0;
+    margin: .7rem 0 0 0;
+    padding: 1rem 0;
+    width: 92.5%;
   }
 
   .read-button {
     float: none;
 }
 
+@media screen and (max-width: 760px) {
+  .enter-button {
+    width: 93%;
+  }
+}
+
 @media screen and (max-width: 480px) {
+  .left-section,
+  .bookmark-content-list {
+    flex-direction: column;
+    float: none;    
+    left: 0;
+    position: fixed;
+    right: 0;
+    width: 100%;
+  }  
+
+  .left-section {
+    height: 45%;
+    top: 0;
+  }
+
+  .bookmark a {
+    display: inline-block;
+    font-size: 13px;
+  }
+
+  .bookmark-content-list {
+    height: 55%;
+    display: block;
+    bottom: 0;
+  }
+
   .title {
-    margin:0 0 0.2rem 0;
+    font-size: 45px;
+    margin: 1.5rem 0 0.2rem 0;
   }
   .title-url-input {
     margin: 0 0 1rem 0;
-    padding: 0.6vw 0;
+    padding: 0rem 0;
   }
   .enter-button {
     margin: 1.0vw 0 0 0;
-    padding: 1.3rem 0;
+    padding: .5rem 0;
+    width: 92%;
   }
   .linked-list-logo {
     text-align: center;
     width: 15vw;
   }
+
 
 
 
