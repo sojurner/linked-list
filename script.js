@@ -22,7 +22,7 @@ function handleBookmarkClick(event) {
     event.target.parentNode.classList.toggle('read');
   }
   if (event.target.className === 'delete-button') {
-    newBookmark.remove();
+    event.target.parentNode.remove();
   }  
   bookmarkCounter();
 };

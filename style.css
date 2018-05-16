@@ -16,7 +16,7 @@ body {
 
 header {
   display: inline-block;
-  color: #FFFFFF;
+  color: #FFF;
   margin: 0 0 10px 0;
 }
 
@@ -41,28 +41,29 @@ input::placeholder {
   color: #B4B4B4;
   font-size: 85%;
   font-weight: 300;
-  letter-spacing: 0.15rem;
+  letter-spacing: .15rem;
   padding: 0 0 0 10px;
 }
 
 .enter-button {
-  color: #FFFFFF;
   background-color: #FFC107;
-  border: none;
+  color: #FFF;
   font-size: 1.5rem;
   font-weight: 700;
   margin: 1.4rem 0;
-  padding: 1.0rem 0;
+
+  padding: 1rem 0;
   width: 647px;
 }
 
 .enter-button:hover { 
   background-color: #FFD773
 }
+
 .card-counter {
+  color: #455A62;
   position: inline-block;
   text-align: center;
-  color: #455A62;
 }
 
 .card-counter h2 {
@@ -73,9 +74,9 @@ input::placeholder {
 
 .card-counter ul li {
   display: inline-block;
+  font-size: 1rem;
   font-weight: 400;
-  margin: 0 0.2rem .2rem .2rem;
-  font-size: 1.0rem;
+  margin: 0 .2rem .2rem .2rem;
 }
 
 ul {
@@ -95,7 +96,7 @@ ul {
 
 .bookmark {
   animation: shazam 1s ease-in, bazinga 1s ease-in alternate;
-  background-color: white;
+  background-color: #FFF;
   border: 2px solid #607D8B;
   display: block;
   margin: 15px 20px;
@@ -123,7 +124,7 @@ hr {
   font-size: 2.3rem;
   font-weight: 800;
   margin: 0;
-  padding: 0 0 0rem 1rem;
+  padding: 0 0 0 1rem;
 }
 
 .bookmark a {
@@ -132,12 +133,14 @@ hr {
   font-size: 1.6rem;
   padding: .2rem 0 .2rem 1rem;
   text-decoration: underline;
-  text-decoration-color: #f2f4f4;
+  text-decoration-color: #F2F4F4;
 }
 
 button {
   background: none;
   border: none;
+  color: #455A64;
+  outline: none;
   padding: 0;
 }
 
@@ -146,19 +149,25 @@ button {
   font-size: 1.3rem;
   margin: .1rem 0 .5rem 1rem;
   text-decoration: underline;
-  text-decoration-color: #f2f4f4;
+  text-decoration-color: #F2F4F4;
 }
 
-.read {
-  background-color: #F05A28;
+.read .read-button {
+  color: #F05A28;
+  font-weight: 800;
+}
+
+.read .read-button:hover {
+  color: #F05A28;
+  font-weight: 800;
 }
 
 .delete-button {
   float: right;
   font-size: 1.3rem;
-  margin: .1rem 1rem .5rem 0rem;
+  margin: .1rem 1rem .5rem 0;
   text-decoration: underline;
-  text-decoration-color: #f2f4f4;
+  text-decoration-color: #F2F4F4;
 }
 
 .bookmark a:hover,
@@ -168,16 +177,14 @@ button {
   text-decoration-color: #FFC107;
 }
 
-/*Media Queries*/
 @media screen and (max-width: 1400px) {
-  
   .title {
-    font-size: 6.0vw;
+    font-size: 6vw;
   }
   
   .linked-list-logo {
     text-align: center;
-    width: 6.0rem;
+    width: 6rem;
   }
 
   .enter-button {
@@ -195,7 +202,6 @@ button {
 }
 
 @media screen and (max-width: 960px) {
-  
   .left-section,
   .bookmark-content-list {
     flex-direction: column;
@@ -212,8 +218,8 @@ button {
   }
 
   .bookmark-content-list {
-    display: block;
     bottom: 0;
+    display: block;
   }
 
   .enter-button,
@@ -227,8 +233,8 @@ button {
   }
 
   .title-url-input {
-    margin: 0.7rem 0 0.5rem 0;
-    padding: .5rem ;
+    margin: .7rem 0 .5rem 0;
+    padding: .5rem;
   }
 
   .linked-list-logo {
@@ -281,23 +287,21 @@ button {
 
   .title {
     font-size: 45px;
-    margin: 1.5rem 0 0.2rem 0;
+    margin: 1.5rem 0 .2rem 0;
   }
+
   .title-url-input {
     margin: 0 0 1rem 0;
-    padding: 0rem 0;
+    padding: 0;
   }
+
   .enter-button {
-    margin: 1.0vw 0 0 0;
     padding: .5rem 0;
     width: 92%;
   }
+
   .linked-list-logo {
     text-align: center;
     width: 15vw;
   }
-
-
-
-
-
+}
