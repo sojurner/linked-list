@@ -74,8 +74,12 @@ input::placeholder {
 .card-counter ul li {
   display: inline-block;
   font-weight: 400;
-  margin: 0 .3rem .2rem .2rem;
+  margin: 0 0.2rem .2rem .2rem;
   font-size: 1.0rem;
+}
+
+ul {
+  margin: 0 35px 0 0;
 }
 
 /*Right section*/
@@ -97,6 +101,11 @@ input::placeholder {
   margin: 15px 20px;
   padding: 0;
   position: relative;
+}
+
+hr {
+  color: #CFD8DC;
+  margin: 15px;
 }
 
 @keyframes shazam {
@@ -131,6 +140,7 @@ button {
   border: none;
   padding: 0;
 }
+
 .read-button {
   float: left;
   font-size: 1.3rem;
@@ -139,8 +149,11 @@ button {
   text-decoration-color: #f2f4f4;
 }
 
+.read {
+  background-color: #F05A28;
+}
+
 .delete-button {
-  display: inline-block;
   float: right;
   font-size: 1.3rem;
   margin: .1rem 1rem .5rem 0rem;
