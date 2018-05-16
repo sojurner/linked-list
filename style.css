@@ -16,7 +16,7 @@ body {
 
 header {
   display: inline-block;
-  color: #FFFFFF;
+  color: #FFF;
   margin: 0 0 10px 0;
 }
 
@@ -46,7 +46,7 @@ input::placeholder {
 }
 
 .enter-button {
-  color: #FFFFFF;
+  color: #FFF;
   background-color: #FFC107;
   border: none;
   font-size: 1.5rem;
@@ -60,29 +60,24 @@ input::placeholder {
   background-color: #FFD773
 }
 
-.enter-button:disabled{
-  background-color: #8A6464;
-}
-
 .card-counter h2 {
-  color: #ffc107;
+  color: #FFC107;
   font-size: 1.063em;
   font-weight: 800;
   text-decoration: underline;
 }
 
 .card-counter ul li {
-  color: #ffffff;
+  color: #FFF;
   display: inline-block;
   font-weight: 400;
   margin: 5px 10px;
 }
 
 .card-counter span {
-  color: #ffc107;
+  color: #FFC107;
 }
 
-/*Right section*/
 .bookmark-content-list {
   background-color: #CFD8DC;
   display: flex;
@@ -135,21 +130,21 @@ button {
   border: none;
   padding: 0;
 }
+
 .read-button {
   float: left;
   font-size: 1.3rem;
   margin: .1rem 0 .5rem 1rem;
   text-decoration: underline;
-  text-decoration-color: #f2f4f4;
+  text-decoration-color: #F2F4F4;
 }
 
 .delete-button {
-  display: inline-block;
   float: right;
   font-size: 1.3rem;
   margin: .1rem 1rem .5rem 0rem;
   text-decoration: underline;
-  text-decoration-color: #f2f4f4;
+  text-decoration-color: #F2F4F4;
 }
 
 .bookmark a:hover,
@@ -159,7 +154,6 @@ button {
   text-decoration-color: #FFC107;
 }
 
-/*Media Queries*/
 @media screen and (max-width: 1400px) {
   
   .title {
@@ -246,9 +240,8 @@ button {
     padding: 1.3rem 0;
   }
 
-
 @media screen and (max-width: 480px) {
   .linked-list-logo {
     text-align: center;
     width: 15vw;
-  }
+  } 
