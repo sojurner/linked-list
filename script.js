@@ -1,50 +1,54 @@
 var websiteTitle = document.querySelector('#website-title');
 var websiteUrl = document.querySelector('#website-url');
 var enterButton = document.querySelector('.enter-button');
-var notReadCounter = document.querySelector('.not-read-counter');
 var titleUrlForm = document.querySelector('.title-url-form');
 var bookmarkList = document.querySelector('.bookmark-content-list');
+var deleteButton = document.querySelector('.delete-button');
 
-var displayReadCounter = document.querySelector('.read-counter');
-var displayNotReadCounter = document.querySelector('.not-read-counter');
-var displayTotalCounter = document.querySelector('.total-counter');
-var totalCounter = 0, readCounter = 0, notReadCounter = 0
+websiteUrl.addEventListener('keyup', enableEnterButton);
+titleUrlForm.addEventListener('submit', bookmarkCreator); 
+deleteButton.addEventListener('click', deleteBookmark);
 
-var enableEnterButton = function() {
+
+function enableEnterButton() {
   if (websiteTitle !== '' && websiteUrl !== '') {
     enterButton.disabled = false;
   }
 };
 
-
-websiteUrl.addEventListener('keyup', enableEnterButton);
-
-titleUrlForm.addEventListener('submit', bookmarkCreator); 
-
 function bookmarkCreator() {
   event.preventDefault();
-  var newBookmark = document.createElement('article');
-  newBookmark.classList.add('bookmark');  
+  newBookmark = document.createElement('article');
+  newBookmark.setAttribute('class', 'bookmark');  
   newBookmark.innerHTML = 
   `<h2>${websiteTitle.value}</h2>
   <hr>
   <a target='_blank' href="${websiteUrl.value}">${websiteUrl.value}</a>
   <hr>
   <button title ="Read Button" class="read-button">Read</button>
-  <button title ="Delete Button" class ="delete-button">Delete</button>`;
-  bookmarkList.prepend(newBookmark);
+  <button title ="Delete Button" class="delete-button">Delete</button>`;
+  bookmarkList.append(newBookmark);
   titleUrlForm.reset();
-  totalCounter ++;
   bookmarkCounter();
 };
 
 function bookmarkCounter() {
-  readCounter = document.querySelectorAll('.read').length
-  totalCounter = document.querySelectorAll('.bookmark').length;
-  notReadCounter = (totalCounter - readCounter);
-  displayReadCounter.innerText = readCounter;
-  displayTotalCounter.innerText = totalCounter;
-  displayNotReadCounter.innerText = notReadCounter;
+  var notReadCounter = document.querySelector('.not-read-counter');
+  var totalCounter = document.querySelector('.total-counter');
+  var readCounter = document.querySelector('.read-counter');
+  readCount = document.querySelectorAll('.read').length
+  totalCount = document.querySelectorAll('.bookmark').length;
+  notReadCount = (totalCount - readCount);
+  readCounter.innerText = readCount;
+  totalCounter.innerText = totalCount;
+  notReadCounter.innerText = notReadCount;
 };
  
+function deleteBookmark() {
+  if (event.target && event.target.matches('.delete-button')) {
+    var card = event.target.closest('.bookmark');
+    bookmark.remove();
+  }
+  bookmarkCounter();
+};
 
