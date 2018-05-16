@@ -5,7 +5,7 @@ var titleUrlForm = document.querySelector('.title-url-form');
 var bookmarkList = document.querySelector('.bookmark-content-list');
 var readButton = document.querySelector('.read-button');
 
-var enableEnterButton = function() {
+function enableEnterButton() {
   if (websiteTitle !== '' && websiteUrl !== '') {
     enterButton.disabled = false;
   }
@@ -27,18 +27,18 @@ function handleBookmarkClick(event) {
   }  
 };
 
-function bookmarkCreator(event) {
+function bookmarkCreator() {
   event.preventDefault();
-  var newBookmark = document.createElement('article');
-  newBookmark.classList = 'bookmark';  
+  newBookmark = document.createElement('article');
+  newBookmark.setAttribute('class', 'bookmark');  
   newBookmark.innerHTML = 
   `<h2>${websiteTitle.value}</h2>
   <hr>
   <a target='_blank' href="${websiteUrl.value}">${websiteUrl.value}</a>
   <hr>
   <button title ="Read Button" class="read-button">Read</button>
-  <button title ="Delete Button" class ="delete-button">Delete</button>`;
-  bookmarkList.prepend(newBookmark);
+  <button title ="Delete Button" class="delete-button">Delete</button>`;
+  bookmarkList.append(newBookmark);
   titleUrlForm.reset();
   bookmarkCounter();
 };

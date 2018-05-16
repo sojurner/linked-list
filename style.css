@@ -31,9 +31,9 @@ header {
 }
 
 .title-url-input {
-  font-size: 3.0rem;
+  font-size: 2.0rem;
   margin: 1.4vw 0 1.8vw 0;
-  padding: 0;
+  padding: 10px 7px;
   width: 640px;
 }
 
@@ -53,7 +53,7 @@ input::placeholder {
   font-weight: 700;
   margin: 1.4rem 0;
   padding: 1.0rem 0;
-  width: 645px;
+  width: 660px;
 }
 
 .enter-button:hover { 
@@ -68,14 +68,10 @@ input::placeholder {
 }
 
 .card-counter ul li {
-  color: #FFF;
   display: inline-block;
   font-weight: 400;
-  margin: 5px 10px;
-}
-
-.card-counter span {
-  color: #FFC107;
+  margin: 0 .3rem .2rem .2rem;
+  font-size: 1.0rem;
 }
 
 .bookmark-content-list {
@@ -166,7 +162,7 @@ button {
   }
 
   .enter-button {
-    width: 91%;
+    width: 93%;
   }
 
   .title-url-input {
@@ -207,13 +203,13 @@ button {
   }
 
   .title {
-    font-size: 45px;
+    font-size: 55px;
     margin: 0;
   }
 
   .title-url-input {
-    margin: 1.5vw 0 0.5vw 0;
-    padding: .1rem ;
+    margin: 0.7rem 0 0.5rem 0;
+    padding: .5rem ;
   }
 
   .linked-list-logo {
@@ -222,8 +218,8 @@ button {
   }
 
   .enter-button {
-    margin: 1.5vw 0 1.5vw 0;
-    padding: 0.4rem 0;
+    margin: .5rem 0 0 0;
+    padding: 0.6rem 0;
   }
 }
 
