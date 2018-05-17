@@ -3,8 +3,6 @@ var websiteUrl = document.querySelector('#website-url');
 var enterButton = document.querySelector('.enter-button');
 var titleUrlForm = document.querySelector('.title-url-form');
 var bookmarkList = document.querySelector('.bookmark-content-list');
-// var readButton = document.querySelector('.read-button');
-// var deleteButton = document.querySelector('.delete-button');
 
 websiteTitle.addEventListener('keyup', enableEnterButton);
 websiteUrl.addEventListener('keyup', enableEnterButton);

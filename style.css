@@ -33,6 +33,7 @@ header {
 .title-url-input {
   font-size: 2.0rem;
   margin: 1.4vw 0 1.8vw 0;
+  outline: none;
   padding: 10px 0px;
   width: 640px;
 }
@@ -83,7 +84,6 @@ ul {
   margin: 0 35px 0 0;
 }
 
-/*Right section*/
 .bookmark-content-list {
   background-color: #CFD8DC;
   display: flex;
@@ -105,8 +105,10 @@ ul {
 }
 
 hr {
-  color: #CFD8DC;
-  margin: 15px;
+  background-color: #CFD8DC;
+  border: none;
+  height: 2px;
+  width: 95%;
 }
 
 @keyframes shazam {
