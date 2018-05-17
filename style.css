@@ -239,6 +239,7 @@ button {
 
   .read-button {
     float: none;
+  }
 }
 
 @media screen and (max-width: 760px) {
