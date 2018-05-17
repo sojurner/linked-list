@@ -94,7 +94,7 @@ ul {
 }
 
 .bookmark {
-  animation: shazam 1s linear, bazinga 1s ease-in;
+  animation: shazam .5s linear, bazinga .5s ease-in;
   background-color: #FFF;
   border: 2px solid #607D8B;
   margin: 15px 20px;
@@ -102,24 +102,21 @@ ul {
   position: relative;
 }
 
-<<<<<<< HEAD
+@keyframes shazam {
+  0%   {right: 250px;}
+  100% {right: 10px;}
+}
+
+@keyframes bazinga {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 hr {
   background-color: #CFD8DC;
   border: none;
   height: 2px;
   width: 95%;
-}
-
-=======
->>>>>>> f6b5f4e3ec029aa82dce98f9a99321846f3a77b7
-@keyframes shazam {
-    0%   {right: 250px;}
-    100% {right: 10px;}
-}
-
-@keyframes bazinga {
-    from { opacity: 0; }
-    to { opacity: 1; }
 }
 
 .bookmark h2 {
@@ -139,9 +136,11 @@ hr {
   text-decoration-color: #F2F4F4;
 }
 
-hr {
-  color: #CFD8DC;
-  margin: 15px;
+.bookmark a:hover,
+.bookmark button:hover {
+  color: #455A64;
+  font-weight: 800;
+  text-decoration-color: #FFC107;
 }
 
 button {
@@ -152,7 +151,8 @@ button {
   padding: 0;
 }
 
-.read-button, .delete-button {
+.read-button, 
+.delete-button {
   font-size: 1.3rem;
   text-decoration: underline;
   text-decoration-color: #F2F4F4;
@@ -176,13 +176,6 @@ button {
 .read .read-button:hover {
   color: #F05A28;
   font-weight: 800;
-}
-
-.bookmark a:hover,
-.bookmark button:hover {
-  color: #455A64;
-  font-weight: 800;
-  text-decoration-color: #FFC107;
 }
 
 @media screen and (max-width: 1400px) {
@@ -229,7 +222,7 @@ button {
 
   .title {
     font-size: 55px;
-    margin: 2rem 0 0 0;
+    margin: .5rem 0 0 0;
   }
 
   .title-url-input {
