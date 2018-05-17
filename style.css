@@ -52,13 +52,12 @@ input::placeholder {
   font-size: 1.5rem;
   font-weight: 700;
   margin: 1.4rem 0;
-
   padding: 1rem 0;
   width: 647px;
 }
 
 .enter-button:hover { 
-  background-color: #FFD773
+  background-color: #FFD773;
 }
 
 .card-counter {
@@ -75,7 +74,7 @@ input::placeholder {
 
 .card-counter ul li {
   display: inline-block;
-  font-size: 1rem;
+  font-size: 1.0rem;
   font-weight: 400;
   margin: 0 .2rem .2rem .2rem;
 }
@@ -95,15 +94,15 @@ ul {
 }
 
 .bookmark {
-  animation: shazam 1s ease-in, bazinga 1s ease-in alternate;
+  animation: shazam 1s linear, bazinga 1s ease-in;
   background-color: #FFF;
   border: 2px solid #607D8B;
-  display: block;
   margin: 15px 20px;
   padding: 0;
   position: relative;
 }
 
+<<<<<<< HEAD
 hr {
   background-color: #CFD8DC;
   border: none;
@@ -111,8 +110,10 @@ hr {
   width: 95%;
 }
 
+=======
+>>>>>>> f6b5f4e3ec029aa82dce98f9a99321846f3a77b7
 @keyframes shazam {
-    0%   {right: 500px;}
+    0%   {right: 250px;}
     100% {right: 10px;}
 }
 
@@ -138,6 +139,11 @@ hr {
   text-decoration-color: #F2F4F4;
 }
 
+hr {
+  color: #CFD8DC;
+  margin: 15px;
+}
+
 button {
   background: none;
   border: none;
@@ -146,12 +152,20 @@ button {
   padding: 0;
 }
 
-.read-button {
-  float: left;
+.read-button, .delete-button {
   font-size: 1.3rem;
-  margin: .1rem 0 .5rem 1rem;
   text-decoration: underline;
   text-decoration-color: #F2F4F4;
+}
+
+.read-button {
+  float: left;
+  margin: .1rem 0 .5rem 1rem;
+}
+
+.delete-button {
+  float: right;
+  margin: .1rem 1rem .5rem 0;
 }
 
 .read .read-button {
@@ -164,14 +178,6 @@ button {
   font-weight: 800;
 }
 
-.delete-button {
-  float: right;
-  font-size: 1.3rem;
-  margin: .1rem 1rem .5rem 0;
-  text-decoration: underline;
-  text-decoration-color: #F2F4F4;
-}
-
 .bookmark a:hover,
 .bookmark button:hover {
   color: #455A64;
@@ -182,11 +188,6 @@ button {
 @media screen and (max-width: 1400px) {
   .title {
     font-size: 6vw;
-  }
-  
-  .linked-list-logo {
-    text-align: center;
-    width: 6rem;
   }
 
   .enter-button {
@@ -206,7 +207,6 @@ button {
 @media screen and (max-width: 960px) {
   .left-section,
   .bookmark-content-list {
-    flex-direction: column;
     float: none; 
     height: 50%;   
     left: 0;
@@ -221,11 +221,9 @@ button {
 
   .bookmark-content-list {
     bottom: 0;
-    display: block;
   }
 
-  .enter-button,
-  .title-url-input {
+  .enter-button {
     margin: 2.5vw 0;
   }
 
@@ -252,6 +250,7 @@ button {
 
   .read-button {
     float: none;
+  }
 }
 
 @media screen and (max-width: 760px) {
@@ -261,19 +260,15 @@ button {
 }
 
 @media screen and (max-width: 480px) {
-  .left-section,
-  .bookmark-content-list {
-    flex-direction: column;
-    float: none;    
-    left: 0;
-    position: fixed;
-    right: 0;
-    width: 100%;
-  }  
-
   .left-section {
     height: 45%;
     top: 0;
+  }
+  
+  .bookmark-content-list {
+    bottom: 0;
+    display: block;
+    height: 55%;
   }
 
   .bookmark a {
@@ -281,15 +276,9 @@ button {
     font-size: 20px;
   }
 
-  .bookmark-content-list {
-    height: 55%;
-    display: block;
-    bottom: 0;
-  }
-
   .title {
     font-size: 45px;
-    margin: .2rem 0 .2rem 0;
+    margin: .1rem 0;
   }
 
   .title-url-input {
@@ -304,7 +293,6 @@ button {
   }
 
   .linked-list-logo {
-    text-align: center;
     width: 15vw;
   }
 }
