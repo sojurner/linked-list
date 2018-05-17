@@ -73,7 +73,7 @@ input::placeholder {
 
 .card-counter ul li {
   display: inline-block;
-  font-size: 1.3rem;
+  font-size: 1.0rem;
   font-weight: 400;
   margin: 0 .2rem .2rem .2rem;
 }
