@@ -1,18 +1,10 @@
 # linked-list
 
-# Save Bookmarks using Link-List
+- Save Bookmarks using Link-List
+- Input title and HTTP link in respective fields.
+- If title field or HTTP link field is empty; save button will disable.
 
-## Input title and HTTP link in respective fields.
+[GH Pages Link]https://sojurner.github.io/linked-list/
 
-### - If title field or HTTP link field is empty; save button will disable.
-
-### - If link is not a valid HTTP link; save button will disable.
-
-## Newly generated cards will increment the total bookmark counter.
-
-## Each bookmark will provide a read and delete options.
-
-### - Selecting read will decrement the unread counter and increment read counter
-
-### - Selecting delete will remove the bookmark and decrement the total bookmark counter
+![linked-list](https://user-images.githubusercontent.com/35910428/47127595-03077280-d24b-11e8-953e-8a69be354c61.gif)
 
