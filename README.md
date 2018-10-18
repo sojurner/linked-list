@@ -1,4 +1,4 @@
-# linked-list
+# Linked-List
 
 - Save Bookmarks using Link-List
 
