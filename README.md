@@ -1,5 +1,9 @@
 # Linked-List
- Linked-list is a Bookmark application that allows users to create bookmarks and track read and unread links.
+ * Linked-list is a Bookmark application that allows users to create bookmarks and track read and unread links.
+ * Goals for this Project:
+  * Familiarize with local storage, DOM manipulation
+  * Applying semantic HTML
+  * CSS organization
  
 ### Technology
 * Javascript
